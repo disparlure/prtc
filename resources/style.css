@@ -1,0 +1,230 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* professional, modern sans-serif stack */
+    font-family: 'Fauna One', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background: #e1dada;
+}
+
+:root {
+    /* primary colors pulled from logo (blue shades) */
+    --primary-color: #007acc;
+    --primary-dark: #005fa3;
+    --accent-color: #ddeeff;
+}
+
+
+
+.container {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+/* header-specific container adjustments */
+.site-header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Header */
+.site-header {
+    background: #fff;
+    border-bottom: 1px solid #e1e1e1;
+    padding: 2rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.header-caption {
+    text-align: center;
+    font-style: italic;
+    color: #555;
+    font-family: 'Darker Grotesque', sans-serif;
+    font-size: 1.25rem;
+}
+
+.main-nav {
+    margin-top: 0.5rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 16px;
+    background: #f2f2f2; /* slightly darker than body */
+    padding: 0.5rem 1rem;
+    list-style: none;
+    font-family: 'Darker Grotesque';
+}
+
+.logo img {
+    width: 100%; /* larger for emphasis */
+    height:auto;
+    max-width: 960px;
+}
+
+.logo h1 {
+    margin: 0 0 0 0.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    /* use regular text color, matching logo text stroke */
+    color: #333;
+    font-family: inherit;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem;
+    transition: background 0.3s, color 0.3s;
+}
+
+
+.main-nav a:hover {
+    background: var(--accent-color);
+    border-radius: 4px;
+    color: var(--primary-dark);
+}
+
+
+/* Hero */
+.hero {
+    background: #ddeeff;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Sections */
+section {
+    padding: 3rem 0;
+}
+
+.services .service-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.service-item {
+    background: #fff;
+    /* removed border for clean look */
+    border-radius: 6px;
+    padding: 1.5rem;
+    flex: 1 1 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.service-item h3 {
+    font-family: Cinzel, serif;
+    margin-bottom: 0.5rem;
+}
+
+.service-item img {
+    width: 85%;       /* fill the card width */
+    height: auto;      /* maintain aspect ratio */
+    border-radius: 4px;
+    display: block;    /* remove any inline spacing */
+}
+
+/* Contact form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 500px;
+}
+
+.contact-form label {
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    align-self: flex-start;
+    padding: 0.75rem 1.5rem;
+    background: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.contact-form button:hover {
+    background: #005fa3;
+}
+
+/* Contact button link */
+.contact-button {
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+    padding: 0.75rem 1.5rem;
+    background: var(--primary-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+.contact-button:hover {
+    background: var(--primary-dark);
+}
+
+/* Footer */
+.site-footer {
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 0.9rem;
+}
